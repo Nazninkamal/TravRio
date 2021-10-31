@@ -23,15 +23,20 @@ const Header = () => {
       <Nav.Link as={HashLink} to="/home#discounts">Discounts</Nav.Link>
       <Nav.Link as={HashLink} to="/contact">Contact us</Nav.Link>
      <Navbar.Collapse className="justify-content-end">
+      { user?.email ?
+           <Nav.Link as={HashLink} to="/myorder">My Order</Nav.Link>:<></>}
+          { user?.email ?
+           <Nav.Link as={HashLink} to="/notfound">Manage all Order</Nav.Link>:<></>}
      {user?.email ?
      <Button onClick={logOut} variant="light">Logout</Button>:
-     <Nav.Link as={HashLink} to="/login">Login</Nav.Link>
+      <Nav.Link as={HashLink} to="/login">Login</Nav.Link>
+
     //  <Nav.Link as={HashLink} to="/register">Register</Nav.Link>
     }
 
       <Navbar.Text>
-        Signed in as: <a href="#login">{user?.displayName}</a><br />
-        email: <a href="#login">{user?.email}</a>
+        Signed in as: <a href="#login">{user?.displayName}</a>
+      
       </Navbar.Text>
        </Navbar.Collapse>
     </Navbar.Collapse>

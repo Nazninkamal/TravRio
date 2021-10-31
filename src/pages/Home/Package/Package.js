@@ -11,10 +11,9 @@ const Package = ({pac}) => {
         <Card.Body className="text-xl-start">
          <p>{location}</p>
          <h5>{name}</h5>
-         <h5>Purchase: ${purchase}</h5>
+         
          <p>Famous for: {description}</p>
-         <small>Duration: {duration} </small>
-         <p> Reviews:{reviews}</p>
+         
          <br />
 
           {/* <Card.Text>

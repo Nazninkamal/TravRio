@@ -9,7 +9,7 @@ const Discount = ({discount}) => {
             <img className="img" src={img} alt="" />
             <h5>{name}</h5>
             <h6>Purchase: ${price}</h6>
-            <Link to={`/about/$`}> <button className="btn btn-warning">Check </button></Link>
+            <Link to={`/duscountdetails/$`}> <button className="btn btn-warning">Check </button></Link>
         
 
             

@@ -11,6 +11,9 @@ import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
 import Login from './pages/Login/Login/Login';
 import AddService from './pages/AddService/AddService';
 import PlaceOrder from './pages/Booking/PlaceOrder/PlaceOrder';
+import ManageServices from './pages/ManageServices/ManageServices';
+import Contact from './pages/Home/Contact/Contact';
+import DuscountDetails from './pages/Booking/DiscountDetails/DuscountDetails';
 
 
 function App() {
@@ -32,8 +35,17 @@ function App() {
     < PrivateRoute path="/placeorder/:serviceId">
     <PlaceOrder></PlaceOrder>
     </PrivateRoute>
+    < PrivateRoute path="/duscountdetails/:discountId">
+   <DuscountDetails></DuscountDetails>
+    </PrivateRoute>
     <Route path="/addservice">
       <AddService></AddService>
+    </Route>
+    <Route path="/contact">
+      <Contact></Contact>
+    </Route>
+    <Route path="/manageservices">
+     <ManageServices></ManageServices>
     </Route>
     <Route path="*">
       <NotFound></NotFound>
